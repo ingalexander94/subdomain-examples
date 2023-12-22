@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://umake.com.co/components/retos/curso-1/styles/blocks.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://umake.com.co/components/retos/curso-1/styles/styles.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.17.10/dist/css/uikit.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <title>Umake | Reto 3</title>
+  </head>
+  <body>
+    <div class="logo animate__animated animate__jackInTheBox">
+      <img
+        src="https://cdn-umake.s3.us-east-2.amazonaws.com/wp-content/uploads/2023/07/27154307/Logo_Header.svg"
+        alt="Logo de Umake"
+      />
+    </div>
+    <main class="game">
+      <div class="locked"></div>
+      <div class="wrapper">
+        <article>
+          <section class="dashboard">
+            <button
+              uk-toggle="target: #modal_instructions"
+              id="show_instructions"
+              type="button"
+            >
+              <i class="fas fa-info-circle mr-2"></i> Instrucciones
+            </button>
+            <label for="toggle_audio">
+              <input
+                type="checkbox"
+                checked="false"
+                name="audio"
+                id="toggle_audio"
+              />
+              <i></i>
+            </label>
+            <div class="no_copy frame">
+              <canvas id="canvas"></canvas>
+            </div>
+            <div class="info extend">
+              <button
+                class="animate__animated animate__bounceIn"
+                id="play"
+              ></button>
+              <button
+                class="animate__animated animate__bounceIn"
+                id="replay"
+              ></button>
+              <div class="timer">
+                <span>00:00</span>
+              </div>
+              <div>
+                <img
+                  src="https://umake.com.co/components/retos/assets/gem3.png"
+                  alt="Logo de gema"
+                />
+                <span id="show_gemas">0/3</span>
+              </div>
+            </div>
+          </section>
+          <section class="controls">
+            <button><i class="fas fa-sync mr-2"></i> Reiniciar nivel</button>
+            <div id="blocklyDiv"></div>
+          </section>
+        </article>
+      </div>
+    </main>
+
+    <div id="modal_success" uk-modal bg-close="false">
+      <div class="uk-modal-dialog uk-margin-auto-vertical">
+        <div class="modal-content">
+          <div>
+            <h3>¡Felicidades!</h3>
+            <p>
+              Has completado todos los niveles, lograste que nuestro robot
+              completara sus misiones.
+            </p>
+            <img
+              src="https://umake.com.co/components/retos/assets/mission_accomplished.png"
+              alt="Logo de umake"
+            />
+            <span>¡Gracias niños!</span>
+            <div class="buttons">
+              <button class="btn-repeat">Repetir</button>
+              <button class="btn-continue active">Finalizar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal_error" uk-modal bg-close="false">
+      <div class="uk-modal-dialog uk-margin-auto-vertical">
+        <div class="modal-content">
+          <div>
+            <h3>Oppsss!</h3>
+            <p>Debes recoger todas las gemas para completar el nivel.</p>
+            <div class="buttons">
+              <button class="uk-modal-close active">Volver al juego</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal_instructions" class="uk-flex-top" uk-modal>
+      <div class="k-modal-dialog uk-width-auto uk-margin-auto-vertical">
+        <button
+          class="uk-modal-close-full uk-close-large"
+          type="button"
+          uk-close
+        ></button>
+        <div class="modal-content">
+          <video
+            src="https://umake.com.co/components/retos/assets/video/instrucciones_3.mp4"
+            autoplay
+            controls
+            uk-video
+          ></video>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.10/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.10/dist/js/uikit-icons.min.js"></script>
+
+    <script src="https://unpkg.com/kaboom@3000.0.1/dist/kaboom.js"></script>
+    <script src="https://unpkg.com/blockly@10.1.3/blockly_compressed.js"></script>
+    <script src="https://unpkg.com/blockly@10.1.3/blocks_compressed.js"></script>
+    <script src="https://unpkg.com/blockly@10.1.3/javascript_compressed.js"></script>
+    <script src="https://unpkg.com/blockly@10.1.3/msg/es.js"></script>
+
+    <script
+      type="module"
+      src="https://umake.com.co/components/retos/curso-1/reto-3/script.js"
+    ></script>
+  </body>
+</html>

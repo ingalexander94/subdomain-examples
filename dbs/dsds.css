@@ -1,0 +1,481 @@
+#openModalButton {
+  display: unset !important;
+}
+
+#img-cars-edit {
+  height: 220px;
+}
+
+#img-cars-edit img {
+  width: 206px;
+  height: 206px;
+}
+
+.modalCurso {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  background: white;
+  margin: 0;
+  padding: 0;
+  z-index: 99999;
+  overflow: hidden;
+}
+
+.cardImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  background: #ffffff;
+  box-shadow: 0px 0px 10px #02396b4d;
+  opacity: 1;
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.contentCurso {
+  display: flex;
+  flex-direction: column;
+  height: 60px;
+  background: #f8f8f8 0% 0% no-repeat padding-box;
+  border: 1px solid #00000000;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+.cardImage img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.containerCards {
+  height: 88px;
+  text-align: center;
+  font: normal normal medium 20px/30px Poppins;
+  color: #00386a;
+  opacity: 1;
+  padding-top: 61px;
+}
+
+.containerCards h1 {
+  font-size: 30px;
+  color: #00386a;
+  font-family: poppins;
+  font-weight: bold;
+  margin: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 470px 1fr;
+  column-gap: 20px;
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.cardContent {
+  display: flex;
+  justify-content: space-between;
+  background: #f8f8f8;
+  height: 60px;
+  align-items: center;
+  padding: 0 10px;
+  border-radius: 6px;
+}
+
+button#closeModalButton {
+  display: flex;
+  height: 43px;
+  border: none;
+  background: transparent;
+  position: relative;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-family: "Poppins";
+  font-size: 30px;
+  color: #00386a;
+  font-weight: bold;
+}
+
+.icon {
+  width: 34px;
+  height: 34px;
+}
+
+.cardContent h1 {
+  font-size: 30px;
+  color: #00386a;
+  font-family: poppins;
+  font-weight: bold;
+  margin: 0;
+}
+
+p.pharagraf {
+  padding-top: 31px;
+  font-family: poppins;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+button.btnAdd {
+  position: relative;
+  top: 35px;
+  background: #1974c6;
+  color: #ffffff;
+  border: none;
+  width: 219px;
+  height: 40px;
+  font-size: 20px;
+  font-family: "Poppins";
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .content {
+    flex-direction: column;
+    padding: 20px;
+    gap: 36px;
+  }
+
+  p.pharagraf {
+    font-size: 15px;
+  }
+
+  .cardImage {
+    width: 100%;
+    height: 92px;
+  }
+
+  .cardContent {
+    width: 100%;
+    height: 41px;
+  }
+
+  .containerCards {
+    width: 344px;
+  }
+
+  .containerCards h1 {
+    font-size: 20px;
+  }
+
+  .containerCards {
+    width: 100%;
+    /* Ajusta al ancho de la pantalla */
+  }
+
+  .modalContent {
+    width: 100%;
+  }
+
+  div#myModal {
+    padding-top: 59px;
+  }
+
+  .cardContent h1 {
+    font-size: 20px;
+  }
+
+  .cardImage {
+    justify-content: flex-start;
+    padding: 10px;
+  }
+
+  .cardImage img {
+    max-width: 68px;
+    max-height: 68px;
+    bottom: 0px;
+  }
+
+  button#closeModalButton {
+    font-size: 20px;
+    width: 83px;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+/* form */
+
+.cardImageForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  background: #ffffff;
+  box-shadow: 0px 0px 10px #02396b4d;
+  opacity: 1;
+  z-index: 1;
+  border-radius: 8px;
+}
+
+button#closeModalButtonForm {
+  display: flex;
+  height: 43px;
+  border: none;
+  background: transparent;
+  position: relative;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-family: "Poppins";
+  font-size: 30px;
+  color: #00386a;
+  font-weight: bold;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  height: 70px;
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  color: #00386a;
+  font-family: "poppins";
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.form-group input {
+  order: 2;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  background: #f8f8f8;
+  padding: 10px;
+  color: #00386a;
+  font-size: 20px;
+  font-weight: 500;
+  width: 100%;
+}
+
+form#myForm {
+  padding-top: 43px;
+  gap: 19px;
+  display: flex;
+  flex-direction: column;
+}
+
+button#btnCancel {
+  height: 44px;
+  border: 2px solid #1974c6;
+  border-radius: 2px;
+  color: #1974c6;
+  font-size: 20px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+button#btnKeep {
+  height: 44px;
+  border: 2px solid #1974c6;
+  border-radius: 2px;
+  background: #1974c6;
+  color: #ffffff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.btnEdit {
+  height: 44px;
+  border-radius: 2px;
+  background: #1974c6 !important;
+  color: #ffffff;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.forBtn {
+  display: flex;
+  padding-top: 30px;
+  column-gap: 20px;
+}
+
+.password-input {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.toggle-password {
+  cursor: pointer;
+  user-select: none;
+}
+
+.toggle-password.active {
+  color: black;
+}
+
+.toggle-password.active:hover {
+  cursor: pointer !important;
+}
+
+img.icons {
+  display: none;
+}
+
+@media (max-width: 500px) {
+  .form-group input {
+    width: 66%;
+    height: 50px;
+  }
+
+  form#myForm {
+    padding-top: 15px;
+    overflow: hidden;
+    gap: 22px;
+  }
+
+  img.icons {
+    display: block;
+  }
+
+  .cardImageForm {
+    width: 360px;
+    height: 92px;
+    display: block;
+  }
+
+  .cardImageForm img {
+    width: 86px;
+    height: 71px;
+    position: relative;
+    top: 10px;
+  }
+
+  .btnEdit {
+    display: none;
+  }
+
+  .forBtn {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    padding-top: 22px;
+  }
+
+  .form-group label {
+    color: #00386a;
+    font-family: "poppins";
+    font-weight: bold;
+    font-size: 16px;
+    width: 326px;
+  }
+
+  .toggle-password {
+    left: 308px;
+  }
+
+  button#closeModalButtonForm {
+    width: 80px !important;
+    height: 31px !important;
+    font-size: 20px !important;
+  }
+
+  button#editBtns {
+    border: none;
+    background: transparent;
+  }
+
+  img.icons {
+    border: none;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    right: 31px;
+  }
+
+  .modal-content {
+    width: 100% !important;
+    margin: 4% 9% !important;
+  }
+
+  .modalcita {
+    position: fixed;
+    top: 152px;
+    left: 0;
+    width: 100%;
+    height: 45% !important;
+    background-color: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    overflow: scroll;
+  }
+}
+
+.modalcita {
+  display: none;
+  position: fixed;
+  z-index: 10;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin-left: 489px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 10px #02396b4d;
+}
+
+.close {
+  color: #888;
+  float: right;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.logos-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-items: center;
+  background: #02396b4d;
+  row-gap: 1px;
+}
+
+.logo-item {
+  text-align: center;
+  background: white;
+  width: 100%;
+  padding: 12px;
+}
+
+.logo-item:hover {
+  cursor: pointer;
+}
+
+.logo-item img {
+  height: 70px;
+  width: 70px;
+}

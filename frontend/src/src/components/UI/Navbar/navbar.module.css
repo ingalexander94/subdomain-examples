@@ -1,0 +1,87 @@
+nav.navbar {
+  width: 100vw;
+  height: 60px;
+  background: var(--primary-color);
+  color: var(--white);
+  position: sticky;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0px 3px 20px #00000029;
+}
+
+nav.navbar div.navbar__menu {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+nav.navbar div.navbar__menu input[type="checkbox"] {
+  display: none;
+}
+
+nav.navbar div.navbar__menu label {
+  cursor: pointer;
+  height: 60px;
+  width: 60px;
+  display: grid;
+  place-content: center;
+}
+
+nav.navbar div.navbar__menu label i {
+  font-size: 18px;
+}
+
+nav.navbar div.navbar__menu label i::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-style: normal;
+  content: "\f0c9";
+}
+
+nav.navbar div.navbar__menu h4 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav.navbar ul.navbar__items {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  text-align: right;
+}
+
+nav.navbar ul.navbar__items li button.logout {
+  appearance: none;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  height: 60px;
+  width: 60px;
+  background: var(--primary-color);
+}
+
+nav.navbar ul.navbar__items li button.logout i {
+  font-size: 20px;
+  color: var(--white);
+}
+
+nav.navbar ul.navbar__items li button.logout:hover i {
+  font-size: 18px;
+  transition: font-size ease 0.2s;
+}
+
+nav.navbar div.navbar__menu input[type="checkbox"]:checked ~ label i::before {
+  content: "\f00d";
+}
+
+nav.navbar div.navbar__menu input[type="checkbox"]:checked ~ aside {
+  display: block;
+  transform: translateX(0);
+  transition: transform ease 0.1s;
+}
